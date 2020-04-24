@@ -50,7 +50,7 @@ class pipe():
         self.bottom = self.top + self.gap
         self.x = width
         self.velocity = velocity
-        self.acceleration = 0.005
+        self.acceleration = 0.005 # increase this to increase the rate of acceleration of this game( easy level to ard level)
 
     def update(self, width, height):
         self.velocity += self.acceleration
