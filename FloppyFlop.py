@@ -1,9 +1,16 @@
+#Made by: Kouah Mohammed Aymen
+#Computer science student at "National Computer science Engineering School, Algiers (ESI)"
+#E-mail: jm_kouah@esi.dz
+#Github: https://github.com/aymenkouah
+#Requires the Pygame Package
+
+
 # packages
 import pygame
 import random
 import time
-# classes
 
+# classes
 
 class bird():
     def __init__(self, width, height):
@@ -57,6 +64,7 @@ class pipe():
 
 
 # variables
+
 bird_color = (255, 255, 255)  # #FFFFFF
 pipes_color = (255, 0, 0)  # #990000
 background_color = (0, 0, 0)  # #000000
@@ -70,7 +78,7 @@ pygame.init()
 pygame.mixer.init()
 window = pygame.display.set_mode((width, height))
 pygame.mixer.music.load(
-    "F:\\Desktop\\LearnPython\\Games\\Floppy Flop\\Nostalgia.mp3")
+    "Nostalgia.mp3")
 pygame.mixer.music.play(loops=-1)
 
 
@@ -78,8 +86,8 @@ flop = bird(width, height)
 pipes = []
 score = 0
 
-# functions
 
+# functions
 
 def create_pipes(pipes):
     if len(pipes) > 0:
@@ -94,6 +102,7 @@ def cancel_pipes(pipes, score):
     if len(pipes) > 0 and pipes[0].x < -pipes[0].width:
         pipes.pop(0)
         score += 1
+        
     return score
 
 
@@ -112,10 +121,12 @@ def text_to_screen(window, score):
 
 
 # main code
-time.sleep(5)
+
 while game_running:
     game_running = not flop.dead(pipes)
+    
     window.fill(background_color)
+    
     if len(pipes) == 0 or pipes[-1].x < width // 2:
         create_pipes(pipes)
 
