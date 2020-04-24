@@ -1,4 +1,3 @@
-# Plappy-Bird-Game
 #Made by: Kouah Mohammed Aymen
 #Computer science student at "National Computer science Engineering School, Algiers (ESI)"
 #E-mail: jm_kouah@esi.dz
